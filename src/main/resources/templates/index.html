@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/css/common.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/sub.css" />
+	<link rel="stylesheet" href="/css/font.css" />
 </head>
 <body>
-    TEST
+    
+    <div class="wrap">
+        <div class="container schedule-container">
+            <div class="cont-inner">
+                
+                <div class="calendar-header cf">
+					<div class="date-wrap">
+						<button type="button" class="prev" id="btnPreMonth"></button>
+						<span class="date" id="spTitle"></span>
+						<button type="button" class="next" id="btnNextMonth"></button>
+					</div>
+					<button type="button" class="btn btn-line-blue fr btnPopup" id="btnAddSch">+ 일정추가</button>
+					<button type="button" class="btn btn-line-blue fr today" id="btnToday">오늘</button>
+				</div>
+
+                <div class="calendar">
+					<div class="calendar-top">
+						<div class="fcr">Sun</div>
+						<div>Mon</div>
+						<div>Tue</div>
+						<div>Wed</div>
+						<div>Thu</div>
+						<div>Fri</div>
+						<div>Sat</div>
+					</div>
+					
+					<div class="month" id="divMonth">
+					</div>
+				</div>
+				<!-- // calendar -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- day.js -->
+	<script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js" integrity="sha256-DLRq9d+sak+DFd9tNntiDhbit2Ap2DBlVfh7l9o+LNM=" crossorigin="anonymous"></script>
+
+	<!-- toastr -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+	<script src="/js/index.js"></script>
 </body>
 </html>
