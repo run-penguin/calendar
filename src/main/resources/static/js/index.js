@@ -7,9 +7,28 @@ $(window).on('load', function() {
 
     makeCalendar();
     
-    
+    addEvents();
 });
 
+function addEvents() {
+
+    // 이전 달 불러오기
+    $('#btnPreMonth').on('click', function(){
+        pageDate = pageDate.add(-1, 'month');
+        makeCalendar();
+    });
+    // 다음 달 불러오기
+    $('#btnNextMonth').on('click', function(){
+        pageDate = pageDate.add(1, 'month');
+        makeCalendar();
+    });
+    // 오늘로 이동
+    $('#btnToday').on('click', function(){
+        pageDate = dayjs();
+        makeCalendar();
+    });
+
+}
 function makeCalendar() {
 
     /**
