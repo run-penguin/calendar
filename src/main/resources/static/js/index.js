@@ -51,6 +51,24 @@ function addEvents() {
         $('#divCreate').addClass('active');
         $('.js-back').addClass('active');
     });
+
+    // 일정 등록
+    $('#btnCreate').on('click', function() {
+
+        $.ajax({
+            type: 'post',
+            url: '/schedule/create',
+            data: $('#createForm').serialize(),
+            success: (res) => {
+                
+                location.reload();
+
+            },
+            error: (jqXHR) => {
+                console.log(jqXHR);
+            }
+        });
+    });
 }
 function makeCalendar() {
 

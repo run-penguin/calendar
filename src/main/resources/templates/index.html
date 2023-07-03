@@ -50,7 +50,7 @@
 
 	<div class="pop-back js-back"></div>
 	<div class="popup js-popup" id="divCreate">
-		<form>
+		<form id="createForm">
 			<div class="pop-header">
 				<span class="pop-title">일정 등록</span>
 				<button type="button" class="close-popup js-close"></button>
@@ -60,27 +60,27 @@
 				<div class="edit-form">
 					<div class="tit">제목</div>
 					<div class="form">
-						<input type="text" class="input-form" name="">
+						<input type="text" class="input-form" name="title">
 					</div>
 				</div>
 
 				<div class="edit-form">
 					<div class="tit">일시</div>
 					<div class="form">
-						<input type="date" class="input-form" name="strEtd">
+						<input type="date" class="input-form" name="date">
 					</div>
 				</div>
 
 				<div class="edit-form">
 					<div class="tit">시각</div>
 					<div class="form time">
-						<p><input type="number" class="input-form" name="etdHour" min="0" max="24"></p>
-						<p><input type="number" class="input-form" name="etdMin" min="0" max="60"></p>
+						<p><input type="number" class="input-form" name="hour" min="0" max="24"></p>
+						<p><input type="number" class="input-form" name="min" min="0" max="60"></p>
 					</div>
 				</div>
 			</div>
 			<div class="pop-footer cf">
-				<button type="submit" class="btn cancel-btn">등록</button>
+				<button type="button" class="btn cancel-btn" id="btnCreate">등록</button>
 			</div>
 		</form>
 	</div>
