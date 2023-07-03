@@ -1,0 +1,220 @@
+
+
+
+
+/* side menu */
+.left-side-menu {
+    width: 75px;
+}
+.left-side-menu label, .side-menu-item a.m1::after {
+    display: none;
+}
+.content-area {
+    margin-left: 75px;
+}
+
+/* side menu 늘어나기 */
+.appearing .left-side-menu {
+    transition: 0.3s;
+    width: 250px;
+}
+.appearing .content-area, .appearing .container {
+    transition: 0.3s;
+    padding-left: 250px;
+}
+.appearing .ship-list {
+    transition: 0.3s;
+}
+
+.appear .left-side-menu {
+    width: 250px;
+}
+.appear .content-area, .appearing .container {
+    padding-left: 250px;
+}
+.appear .left-side-menu label, .appear .side-menu-item a::after {
+    display: inline-block;
+}
+
+/* side menu 줄어들기 */
+.disappear .left-side-menu {
+    transition: 0.3s;
+    width: 75px;
+}
+.disappear .content-area, .disappear .container {
+    transition: 0.3s;
+    padding-left: 75px;
+}
+.disappear .ship-list {
+    transition: 0.3s;
+}
+.disappear ul.menu-depth2,
+.disappear .side-menu-depth1 .depth2-tit {
+    display: none;
+}
+
+.disappear .container {
+    width: calc(100% - 75px);
+}
+
+
+ul.fd,
+.side-menu-depth1.fd {
+    display: none;
+}
+
+
+/* toastr */
+#toast-container > .toastr {
+    width: 500px;
+}
+.toast-top-center {
+    margin-top: 80px;
+}
+
+
+/* popup */
+.popup {
+    display: none;
+}
+.popup.active, .pop-back.active, .popup-delete.active {
+    display: block;
+}
+.pop-back {
+    cursor: pointer;
+}
+
+
+/* notice popup */
+.notice-pop {
+    display: none;
+}
+
+
+
+/* search select box */
+.search-select {
+    width: 100%;
+}
+.search-select select, .search-select div {
+    display: none;
+}
+.search-select-dropdown.active {
+    display: block;
+}
+
+
+
+/* search select box - favorite */
+li.favorite > button, li.unfavorite > button {
+    display: inline-block;
+	width: 14px;
+    height: 14px;
+    cursor: pointer;
+    padding: 2px 12px;
+}
+li.favorite:hover, li.unfavorite:hover {
+    opacity: 0.5;
+}
+li.favorite > button {
+    background: url("/images/star-solid.svg") no-repeat center;
+}
+li.unfavorite > button {
+	background: url("/images/star-regular.svg") no-repeat center;
+}
+
+
+
+
+/* 비상 */
+#emAlarm, #emPopup {
+    display: none;
+}
+
+#emAlarm.active {
+    display: flex;
+}
+#emPopup.active {
+    display: block;
+}
+
+
+
+
+
+input[type=date]::-webkit-calendar-picker-indicator {
+	/* color: #999; */
+	height: 14px;
+	/* position: relative; */
+	width: 14px;
+	margin-left: 0px;
+}
+
+
+
+
+
+
+.edit-form .form textarea.input-form {
+    height: 100px;
+}
+
+
+.pms.hide {
+    display: none;
+}
+.other.hide {
+    display: none;
+}
+
+
+/* 지점/사무소 */
+input:read-only ,textarea:read-only{
+    cursor: default;
+    background-color: rgba(239, 239, 239, 0.3);
+}
+
+
+/* loadding */
+.loadding {
+    display: none;
+    background-color: #fff;
+    background-image: url(/images/loadding.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: calc(100% - 70px);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    opacity: 0.7;
+}
+.loadding.show {
+    display: block;
+}
+
+
+
+
+.input-top-array select.input-form.memberPage-ship-select{
+	width: 10rem;
+}
+
+
+
+#lbOptimal {
+    color: blue;
+}
+
+
+
+/* 해상 직원 페이지 */
+input.block {
+    display: block;
+}
+
+
+
+.form-check.disabled {
+    color: #b3b3b3;
+}

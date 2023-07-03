@@ -9,10 +9,12 @@
 	<link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/sub.css" />
 	<link rel="stylesheet" href="/css/font.css" />
+	<link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-    
+
     <div class="wrap">
+
         <div class="container schedule-container">
             <div class="cont-inner">
                 
@@ -44,6 +46,44 @@
             </div>
         </div>
     </div>
+
+
+	<div class="pop-back js-back"></div>
+	<div class="popup js-popup" id="divCreate">
+		<form>
+			<div class="pop-header">
+				<span class="pop-title">일정 등록</span>
+				<button type="button" class="close-popup js-close"></button>
+			</div>            
+			<div class="pop-cont">
+
+				<div class="edit-form">
+					<div class="tit">제목</div>
+					<div class="form">
+						<input type="text" class="input-form" name="">
+					</div>
+				</div>
+
+				<div class="edit-form">
+					<div class="tit">일시</div>
+					<div class="form">
+						<input type="date" class="input-form" name="strEtd">
+					</div>
+				</div>
+
+				<div class="edit-form">
+					<div class="tit">시각</div>
+					<div class="form time">
+						<p><input type="number" class="input-form" name="etdHour" min="0" max="24"></p>
+						<p><input type="number" class="input-form" name="etdMin" min="0" max="60"></p>
+					</div>
+				</div>
+			</div>
+			<div class="pop-footer cf">
+				<button type="submit" class="btn cancel-btn">등록</button>
+			</div>
+		</form>
+	</div>
 
 
     <!-- jquery -->

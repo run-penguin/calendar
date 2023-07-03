@@ -5,12 +5,25 @@ $(window).on('load', function() {
 
     pageDate = dayjs();
 
+    // 현재날짜 입력
+    $('input[type="date"]').val(pageDate.format('YYYY-MM-DD'));
+
     makeCalendar();
     
     addEvents();
 });
 
 function addEvents() {
+
+    // 팝업 닫기
+    $('.js-close').on('click', function() {
+        $('.js-back').removeClass('active');
+        $(this).closest('.js-popup').removeClass('active');
+    });
+    $('.js-back').on('click', function() {
+        $('.js-back').removeClass('active');
+        $('.js-popup').removeClass('active');
+    });
 
     // 이전 달 불러오기
     $('#btnPreMonth').on('click', function(){
@@ -28,6 +41,16 @@ function addEvents() {
         makeCalendar();
     });
 
+
+    // 일정 추가 버튼 클릭
+    $('#btnAddSch').on('click', function(){
+
+        $('.cont-wrap').addClass('calendar-control');
+        $('.calendar-edit').removeClass('active');
+
+        $('#divCreate').addClass('active');
+        $('.js-back').addClass('active');
+    });
 }
 function makeCalendar() {
 
