@@ -14,12 +14,23 @@ public class ScheduleDto {
     @Builder
     @AllArgsConstructor
     public static class ScheduleCreateDto {
-        
+
         String title;
 
         @DateTimeFormat(pattern = "yyyy-MM-dd")
         Date date;
 
+        Integer hour;
+        Integer min;
+    }
+
+    @Getter
+    @Builder
+    @AllArgsConstructor
+    public static class ScheduleListDto {
+        long id;
+        String title;
+        Date date;
         Integer hour;
         Integer min;
     }
